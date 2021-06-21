@@ -8,14 +8,7 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
-    "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js"
-  },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
   },
   "dependencies": {
     "next": "^11.0.0",
