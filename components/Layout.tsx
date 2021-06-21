@@ -1,11 +1,11 @@
-import Head from "next/head"
-import { NextSeo } from "next-seo"
+import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 interface Props {
 	title?: string
 }
 
-const Layout: React.FunctionComponent<Props> = ( { children, title } ) => {
+const Layout = ({ children, title = `Inicio 🚀` }: React.PropsWithChildren<Props>) => {
 	return (
 		<div>
 			<Head>
@@ -26,10 +26,6 @@ const Layout: React.FunctionComponent<Props> = ( { children, title } ) => {
 			</main>
 		</div>
 	)
-}
-
-Layout.defaultProps = {
-	title: `Inicio 🚀`
 }
 
 export default Layout

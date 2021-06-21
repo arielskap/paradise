@@ -1,7 +1,7 @@
-import HolaMundo from "@components/HolaMundo"
-import Layout from "@components/Layout"
+import HolaMundo from '@components/HolaMundo'
+import Layout from '@components/Layout'
 
-const Index: React.FunctionComponent = () => {
+const Index = () => {
 	return (
 		<Layout>
 			<div className='flex items-center justify-center w-screen h-screen'>
