@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 export const useIsPortrait = () => {
-	const [isPortrait, setIsPortrait] = useState<boolean | null>(null)
+	const [isPortrait, setIsPortrait] = useState<boolean>(true)
 
 	useEffect(() => {
 		const match = window.matchMedia('(min-height: 500px)')
