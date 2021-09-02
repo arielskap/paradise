@@ -3,9 +3,10 @@ import { NextSeo } from 'next-seo'
 
 interface Props {
 	title?: string
+	children: React.ReactNode
 }
 
-const Layout = ({ children, title = `Inicio 🚀` }: React.PropsWithChildren<Props>) => {
+const Layout = ({ children, title = 'Inicio 🚀' }: Props) => {
 	return (
 		<div>
 			<Head>
@@ -18,7 +19,7 @@ const Layout = ({ children, title = `Inicio 🚀` }: React.PropsWithChildren<Pro
 			</Head>
 			<NextSeo
 				title={title}
-				description='This is a Next-App 😊'
+				description='This is a Paradise-App 🏞🛣🏖🏜⛰'
 				canonical="http://localhost:3000"
 			/>
 			<main>

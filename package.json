@@ -15,7 +15,10 @@
     "next": "^11.0.0",
     "next-seo": "^4.19.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-audio-player": "^0.17.0",
+    "react-dom": "^17.0.1",
+    "react-player": "^2.9.0",
+    "swiper": "^7.0.1"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.0.0",

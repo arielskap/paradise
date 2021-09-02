@@ -24,9 +24,6 @@ rules:
     - tab
   no-tabs:
     - off
-  quotes:
-    - error
-    - backtick
   react/jsx-uses-react:
     - off
   react/react-in-jsx-scope:
