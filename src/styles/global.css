@@ -11,3 +11,7 @@
   display: block;
   width: 100%;
 }
+
+.bg-video {
+  background-image: radial-gradient(circle at 12.5% 12.5%, #fe8643 0, #ff7a46 10%, #ff6d4a 20%, #ff5e4e 30%, #ff4d53 40%, #ff3858 50%, #fb1a5e 60%, #f70066 70%, #f1006f 80%, #ea0079 90%, #e20084 100%);
+}

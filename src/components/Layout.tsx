@@ -22,7 +22,7 @@ const Layout = ({ children, title = 'Inicio 🚀' }: Props) => {
 				description='This is a Paradise-App 🏞🛣🏖🏜⛰'
 				canonical="http://localhost:3000"
 			/>
-			<main>
+			<main className="font-indieFlower">
 				{children}
 			</main>
 		</div>
