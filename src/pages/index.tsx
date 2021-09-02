@@ -7,9 +7,37 @@ import Layout from '@components/Layout'
 import Logo from '@public/logo.png'
 import Video from '@components/Video'
 import { useIsPortrait } from 'src/hooks/useIsPortrait'
+import { useEffect } from 'react'
 
 const Index = () => {
 	const { isPortrait } = useIsPortrait()
+
+	useEffect(() => {
+		const lazyVideos = [].slice.call(document.querySelectorAll('video.lazy'))
+		console.log(lazyVideos)
+		if ('IntersectionObserver' in window) {
+			const lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+				entries.forEach(function (video) {
+					if (video.isIntersecting) {
+						for (const source in video.target.children) {
+							const videoSource = video.target.children[source] as HTMLVideoElement
+							if (typeof videoSource.tagName === 'string' && videoSource.tagName === 'SOURCE') {
+								videoSource.src = videoSource.dataset.srcurl || ''
+							}
+						}
+						const target = video.target as HTMLVideoElement
+						target.load()
+						target.classList.remove('lazy')
+						lazyVideoObserver.unobserve(target)
+					}
+				})
+			})
+
+			lazyVideos.forEach(function (lazyVideo) {
+				lazyVideoObserver.observe(lazyVideo)
+			})
+		}
+	}, [])
 	return (
 		<Layout title="Paradise 🏝">
 			{isPortrait
