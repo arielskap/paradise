@@ -6,7 +6,7 @@ interface Props {
 const Video = ({ url, title }: Props) => {
 	return (
 		<div className="relative w-full border border-black h-72 rounded-xl bg-video">
-			<video className="w-full h-full" preload="auto" autoPlay loop muted controls>
+			<video className="w-full h-full" preload="none" autoPlay loop muted controls>
 				<source src={url} type="video/mp4"/>
 				Your browser does not support the video tag.
 			</video>

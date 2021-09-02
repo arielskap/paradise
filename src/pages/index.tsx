@@ -1,8 +1,8 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable jsx-a11y/accessible-emoji */
 import Image from 'next/image'
 import { EffectCube, Controller } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import ReactPlayer from 'react-player'
 import Layout from '@components/Layout'
 import Logo from '@public/logo.png'
 import Video from '@components/Video'
@@ -69,7 +69,10 @@ const Index = () => {
 							<Image src={Logo} alt="La rosa de guadalupe" />
 						</div>
 						<div className="absolute bottom-0 left-0 w-full h-8">
-							<ReactPlayer width="100%" height="100%" url="/guadalupe.mp3" controls />
+							<audio className="w-full h-full" controls>
+								<source src="guadalupeAudio.mp3" type="audio/mp3"/>
+							Your browser does not support the audio element.
+							</audio>
 						</div>
 					</div>
 				)}
